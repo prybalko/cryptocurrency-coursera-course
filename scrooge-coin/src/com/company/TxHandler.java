@@ -7,8 +7,11 @@ public class TxHandler {
      * {@code utxoPool}. This should make a copy of utxoPool by using the UTXOPool(UTXOPool uPool)
      * constructor.
      */
+
+    private UTXOPool BlockChain;
+
     public TxHandler(UTXOPool utxoPool) {
-        // IMPLEMENT THIS
+        BlockChain = utxoPool;
     }
 
     /**
@@ -21,6 +24,12 @@ public class TxHandler {
      *     values; and false otherwise.
      */
     public boolean isValidTx(Transaction tx) {
+        System.out.println(tx.getOutput(0));
+        System.out.println(tx.getOutput(1));
+        System.out.println(tx.getOutput(2));
+//        if (BlockChain.contains(tx)) {
+//            return Boolean.FALSE;
+//        }
         // IMPLEMENT THIS
         Boolean isValid = Boolean.TRUE;
         return isValid;
